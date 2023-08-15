@@ -249,7 +249,7 @@ Create a C function that prints some basic info about Python lists.
 
 ``````text
 julien@ubuntu:~/CPython$ gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c
-julien@ubuntu:~/CPython$ cat 100-test_lists.py 
+julien@ubuntu:~/CPython$ cat 100-test_lists.py
 import ctypes
 
 lib = ctypes.CDLL('./libPyList.so')
@@ -271,7 +271,7 @@ l.append(4)
 lib.print_python_list_info(l)
 l.pop()
 lib.print_python_list_info(l)
-julien@ubuntu:~/CPython$ python3 100-test_lists.py 
+julien@ubuntu:~/CPython$ python3 100-test_lists.py
 [*] Size of the Python List = 2
 [*] Allocated = 2
 Element 0: str
@@ -306,7 +306,7 @@ Element 0: int
 Element 1: int
 Element 2: int
 Element 3: int
-julien@CPython:~/CPython$ 
+julien@CPython:~/CPython$
 ``````
 
 * File: `100-print_python_list_info.c`
