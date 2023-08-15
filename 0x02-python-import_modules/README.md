@@ -82,7 +82,7 @@ Write a program that prints the number of and the list of its arguments.
 * The number of elements of `argv` can be retrieved by using: `len(argv)`
 
 ``````text
-guillaume@ubuntu:~/0x02$ ./2-args.py 
+guillaume@ubuntu:~/0x02$ ./2-args.py
 0 arguments.
 guillaume@ubuntu:~/0x02$ ./2-args.py Hello
 1 argument:
