@@ -11,5 +11,5 @@ def roman_to_int(roman_string):
             num -= roman[roman_string[ch]]
         else:
             num += roman[roman_string[ch]]
-    num += roman[roman_string[-1]] # Adds the last character
+    num += roman[roman_string[-1]]  # Adds the last character
     return num
