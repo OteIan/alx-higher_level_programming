@@ -12,7 +12,7 @@ if __name__ == '__main__':
     a, operator, b = arguments
 
     if operator == '+':
-        print('{} + {} = {}'.format(a, b, add(int(a), int (b))))
+        print('{} + {} = {}'.format(a, b, add(int(a), int(b))))
     elif operator == '-':
         print('{} - {} = {}'.format(a, b, sub(int(a), int(b))))
     elif operator == '*':
