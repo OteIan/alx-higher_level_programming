@@ -70,7 +70,7 @@ class Square:
         Raises:
             TypeError: If the tple has an int less than 0
         """
-        if len(value) != 2:
+        if len(value) != 2 or not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         for i in range(len(value)):
             if not isinstance(value[i], int) or value[i] < 0:
