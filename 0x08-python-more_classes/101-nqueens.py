@@ -8,9 +8,9 @@ def main():
         if len(argv) != 2:
             print("Usage: nqueens N")
             exit(1)
-        
+
         num = argv[1]
-        
+
         if not isinstance(num, int):
             print("N must be a number")
             exit(1)
