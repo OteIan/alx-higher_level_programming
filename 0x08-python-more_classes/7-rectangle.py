@@ -12,8 +12,8 @@ class Rectangle:
         number_of_instances (int): Number of instances created
         print_symbol (str): Symbol used to print the rectangle
     """
-    number_of_instances = 0 # Class-level attribute to count instances
-    print_symbol = "#" # Class-level attribute to define the print symbol
+    number_of_instances = 0  # Class-level attribute to count instances
+    print_symbol = "#"  # Class-level attribute to define the print symbol
 
     def __init__(self, width=0, height=0):
         """
@@ -25,8 +25,8 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        self.number_of_instances += 1
-    
+        Rectangle.number_of_instances += 1
+
     @property
     def width(self):
         """
@@ -36,7 +36,7 @@ class Rectangle:
             int: Width of the rectangle
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """
@@ -64,7 +64,7 @@ class Rectangle:
             int: Height of the rectangle
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -72,7 +72,7 @@ class Rectangle:
 
         Args:
             value (int): Height of the rectangle
-        
+
         Raises:
             TypeError: If 'value' is not an integer
             ValueError: If 'value' is less than 0
@@ -91,7 +91,7 @@ class Rectangle:
             int: Area of the rectangle
         """
         return (self.__width * self.__height)
-        
+
     def perimeter(self):
         """
         Calculates the perimeter of the rectangle and returns the value
@@ -102,7 +102,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * (self.__width + self.__height))
-    
+
     def __str__(self):
         """
         Returns a string representation of the rectangle using print_symbol
@@ -112,12 +112,12 @@ class Rectangle:
         """
         if self.width == 0 or self.height == 0:
             return ""
-        
+
         rectangle_str = ""
         for i in range(self.height):
             rectangle_str += str(self.print_symbol) * self.width + '\n'
         return rectangle_str.strip()
-    
+
     def __repr__(self):
         """
         Returns a string representation of the rectangle for recreation
@@ -126,7 +126,7 @@ class Rectangle:
             str: String representation of the rectangle
         """
         return (f"Rectangle({self.width}, {self.height})")
-    
+
     def __del__(self):
         """
         Destructor method for Rectangle instance
@@ -135,4 +135,4 @@ class Rectangle:
         attributes
         """
         print("Bye rectangle...")
-        self.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
