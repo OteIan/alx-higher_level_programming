@@ -11,10 +11,10 @@ def text_indentation(text):
 
     Raises:
         TypeError: If 'text' is not a string
-    """   
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    
+
     new_text = text.strip()
     result = ""
 
