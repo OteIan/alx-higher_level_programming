@@ -12,10 +12,10 @@ def max_integer(my_list=[]):
 
     if len(my_list) == 0:
         return None
-    
+
     if not all(isinstance(value, (int, float)) for value in my_list):
         raise TypeError
-    
+
     result = my_list[0]
     i = 1
     while i < len(my_list):
