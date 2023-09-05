@@ -20,12 +20,6 @@ def matrix_divided(matrix, div):
             or if 'div' is not a number, or if all rows in 'matrix' are not
             of the same length
         ZeroDivisionError: If 'div' is equal to zero
-
-    Example:
-        >>> matrix = [[1, 2, 3], [4, 5, 6]]
-        >>> result = matrix_divided(matrix, 2)
-        >>> print(result)
-        [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
     """
     if matrix is None or div is None:
         return None

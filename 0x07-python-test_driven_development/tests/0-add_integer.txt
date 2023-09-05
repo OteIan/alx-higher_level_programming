@@ -1,0 +1,96 @@
+The ``add-integer`` module
+==========================
+
+Using ``add-integer``
+---------------------
+
+Importing the function from the module
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Checking for module docstring
+>>> m_doc = __import__('0-add_integer').__doc__
+>>> len(m_doc) > 1
+True
+
+Checking for function docstring
+>>> f_doc = __import__('0-add_integer').add_integer.__doc__
+>>> len(f_doc) > 1
+True
+
+Basic addition test
+>>> add_integer(3, 2)
+5
+
+Checking default argument
+>>> add_integer(2)
+100
+
+Checking using float inputs
+>>> add_integer(2.4, 3.8)
+5
+
+Check using negative float inputs
+>>> add_integer(-2.4, -3.8)
+-5
+
+Check using float and integer
+>>> add_integer(2.4, 6)
+8
+
+Check negative and positive
+>>> add_integer(-2, 5)
+3
+
+Check both negative
+>>> add_integer(-2, -4)
+-6
+
+Check a is 0
+>>> add_integer(0, 7)
+7
+
+Check b is 0
+>>> add_integer(4, 0)
+4
+
+Check both are 0
+>>> add_integer(0, 0)
+0
+
+Check when large integer inputs
+>>> add_integer(10**9, 2**30)
+2073741824
+
+Check when a is a non integer
+>>> add_integer("3", 6)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Check when b is a non integer
+>>> add_integer(8, [9])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+Check with bool and a number
+>>> add_integer(8, True)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+Check addition over a range of numbers
+>>> [add_integer(i, i**2) for i in range(6)]
+[0, 2, 6, 12, 20, 30]
+
+Check with no args
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Check with 3 args
+>>> add_integer(1, 2, 3)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
