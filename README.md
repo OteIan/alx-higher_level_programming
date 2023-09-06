@@ -1,6 +1,6 @@
 # Python Programming
 
-## Concepts to familirialize yourself with python first hand:
+## Concepts to familirialize yourself with python first hand
 
 * [The Python Tutorial](https://intranet.alxswe.com/rltoken/Fl7kjKxXgkbmX5P0-4k4tQ)
 * [Python Programming: An Introduction to Computer Science 3rd edition](https://intranet.alxswe.com/rltoken/NHlaFZoFcYtZHVMj1ncXmw)
