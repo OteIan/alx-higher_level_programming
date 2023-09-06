@@ -61,6 +61,18 @@ Check when large integer inputs
 >>> add_integer(10**9, 2**30)
 2073741824
 
+Check for float overflow
+>>> add_integer(3, float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+Check for NaN
+>>> add_integer(8, float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
 Check when a is a non integer
 >>> add_integer("3", 6)
 Traceback (most recent call last):
@@ -68,7 +80,7 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 Check when b is a non integer
->>> add_integer(8, [9])
+>>> add_integer(8, [9, 5])
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
