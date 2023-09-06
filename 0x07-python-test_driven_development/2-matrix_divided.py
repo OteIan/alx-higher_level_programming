@@ -24,12 +24,13 @@ def matrix_divided(matrix, div):
     if matrix is None or div is None:
         return None
 
+    error_msg = "matrix must be a matrix (list of lists) of integers/floats"
     # Checks if 'matrix' is a list of lists containing integers/floats
     if not (isinstance(matrix, list) and
             all(isinstance(row, list) for row in matrix) and
             all(isinstance(value, (int, float))for row in matrix
             for value in row)):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(error_msg)
 
     # Check if every row of matrix is of the same length
     first_row_length = len(matrix[0])
