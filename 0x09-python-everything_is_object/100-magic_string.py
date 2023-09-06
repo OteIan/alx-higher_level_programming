@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def magic_string():
-    setattr(magic_string, "count", getattr(magic_string, "count", -1) + 1)
-    return "Best School" + (", Best School" * magic_string.count)
+def magic_string(H=[]):
+    H += ["Best School"]
+    return (", " .join(H))
