@@ -1,0 +1,53 @@
+The ``my_list`` module
+======================
+
+Using ``my_list``
+-----------------
+
+Importing the function from the module
+    >>> MyList = __import__('1-my_list').MyList
+
+Check for module docstring
+    >>> m_doc = __import__("1-my_list").__doc__
+    >>> len(m_doc) > 1
+    True
+
+Check for class docstring
+    >>> c_doc = __import__("1-my_list").MyList.__doc__
+    >>> len(c_doc) > 1
+    True
+
+Check for function docstring
+    >>> f_doc = __import__("1-my_list").MyList.print_sorted.__doc__
+    >>> len(f_doc) > 1
+    True
+
+Test empty list
+    >>> my_list = MyList([])
+    >>> my_list.print_sorted()
+    []
+
+Test all positive integers
+    >>> my_list = MyList([2, 9, 65, 83, 3])
+    >>> my_list.print_sorted()
+    [2, 3, 9, 65, 83]
+
+Test all negative integers
+    >>> my_list = MyList([-3, -6, -8, -2, -9])
+    >>> my_list.print_sorted()
+    [-9, -8, -6, -3, -2]
+
+Test positive and negative integers
+    >>> my_list = MyList([-3, 4, 7, -2, 5])
+    >>> my_list.print_sorted()
+    [-3, -2, 4, 5, 7]
+
+Test already sorted list
+    >>> my_list = MyList([1, 2, 3, 4, 5])
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+Test list with one element
+    >>> my_list = MyList([1])
+    >>> my_list.print_sorted()
+    [1]
