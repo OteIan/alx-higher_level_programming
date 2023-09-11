@@ -2,6 +2,6 @@
 """ BaseGeometry class definition """
 
 
-class BaseGeommetry:
+class BaseGeometry:
     """ Empty class """
     pass
