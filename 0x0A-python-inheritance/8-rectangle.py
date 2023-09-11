@@ -59,7 +59,17 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """  """
+    """
+    Rectangle is a class that represents a geometric rectangle and inherits from BaseGeometry.
+
+    Attributes:
+    - __width (int): The width of the rectangle.
+    - __height (int): The height of the rectangle.
+
+    Methods:
+    - __init__(self, width, height): Initializes a new rectangle
+    instance based on the given width and height.
+    """
     def __init__(self, width, height):
         """
         This initializes a new rectangle instance based on the given
