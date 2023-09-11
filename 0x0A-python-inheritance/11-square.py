@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Definition of Square subclass of Rectangle subclass of BaseGeometry class
+"""
 
 
 Rectangle = __import__('9-rectangle').Rectangle
