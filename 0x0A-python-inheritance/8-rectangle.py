@@ -60,7 +60,8 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """
-    Rectangle is a class that represents a geometric rectangle and inherits from BaseGeometry.
+    Rectangle is a class that represents a geometric rectangle and inherits
+    from BaseGeometry.
 
     Attributes:
     - __width (int): The width of the rectangle.
@@ -81,5 +82,5 @@ class Rectangle(BaseGeometry):
         """
         self.__width = width
         self.__height = height
-        self.integer_validator("width", self.__width)
-        self.integer_validator("height", self.__height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
