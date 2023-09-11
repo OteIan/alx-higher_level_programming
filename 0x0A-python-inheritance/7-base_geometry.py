@@ -9,7 +9,8 @@ class BaseGeometry:
 
     Methods:
     - area(self): Placeholder method for calculating the area of a geometric
-    shape. Subclasses should override this method with their own implementations.
+    shape. Subclasses should override this method with their own
+    implementations
 
     - integer_validator(self, name, value): Validates that a given value
     is a positive integer.
