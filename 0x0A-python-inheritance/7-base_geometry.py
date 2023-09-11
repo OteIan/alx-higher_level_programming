@@ -4,18 +4,22 @@
 
 class BaseGeometry:
     """
-    BaseGeometry is a base class for representing geometric shapes and performing related operations.
+    BaseGeometry is a base class for representing geometric shapes and
+    performing related operations.
 
     Methods:
-    - area(self): Placeholder method for calculating the area of a geometric shape. Subclasses should override this method with their own implementations.
+    - area(self): Placeholder method for calculating the area of a geometric
+    shape. Subclasses should override this method with their own implementations.
 
-    - integer_validator(self, name, value): Validates that a given value is a positive integer.
+    - integer_validator(self, name, value): Validates that a given value
+    is a positive integer.
 
     Attributes:
     None
 
     Usage:
-    This class is intended to be subclassed to create specific geometric shape classes.
+    This class is intended to be subclassed to create specific geometric
+    shape classes.
     """
 
     def area(self):
@@ -24,7 +28,8 @@ class BaseGeometry:
         Subclasses should override this method with their own implementations.
 
         Raises:
-        Exception: This method raises an Exception with the message "area() is not implemented."
+        Exception: This method raises an Exception with the message
+        "area() is not implemented."
 
         Returns:
         None
@@ -36,7 +41,7 @@ class BaseGeometry:
         Validates that a given value is a positive integer.
 
         Args:
-        name (str): A string representing the name of the value being validated.
+        name (str): A string representing the name of the value being validated
         value (int): The value to be validated.
 
         Raises:
