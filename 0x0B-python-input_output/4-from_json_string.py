@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """
-This script defines a function 'from_json_string' that converts a JSON-formatted string to a Python object.
+This script defines a function 'from_json_string' that converts a
+JSON-formatted string to a Python object
 
 Usage:
-    To use this script, call the 'from_json_string' function with a JSON-formatted string as an argument.
+    To use this script, call the 'from_json_string' function with a
+    JSON-formatted string as an argument
 
 Example:
     json_string = '{"name": "John", "age": 30}'
