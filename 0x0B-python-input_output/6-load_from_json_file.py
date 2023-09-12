@@ -16,6 +16,14 @@ import json
 
 
 def load_from_json_file(filename):
-    """  """
+    """
+    Load a Python object from a JSON file.
+
+    Parameters:
+        filename (str): The name of the JSON file from which the object will be loaded.
+
+    Returns:
+        object: The Python object loaded from the JSON file.
+    """
     with open(filename, 'r', encoding='utf-8') as f:
         return json.load(f)
