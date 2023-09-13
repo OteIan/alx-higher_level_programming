@@ -67,9 +67,6 @@ class Student:
         Args:
             json (dict): A JSON dictionary containing attribute names and
             values.
-
-        Returns:
-            self: The updated Student object.
         """
         for key, value in json.items():
             setattr(self, key, value)
