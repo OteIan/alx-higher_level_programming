@@ -42,11 +42,10 @@ class Student:
         Returns:
             dict: A dictionary containing the attributes of the Student object
         """
-        data = {}
-
-        for name in dir(self):
-            value = getattr(self, name)
-            if isinstance(value, (list, int, str, dict, bool)):
-                data[name] = value
+        data = {
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "age": self.age
+        }
 
         return data
