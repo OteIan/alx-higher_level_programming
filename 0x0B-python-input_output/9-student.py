@@ -46,7 +46,7 @@ class Student:
 
         for name in dir(self):
             value = getattr(self, name)
-            if isinstance(value, (list, dict, str, int, bool)):
+            if isinstance(value, (list, int, str, dict, bool)):
                 data[name] = value
 
         return data
