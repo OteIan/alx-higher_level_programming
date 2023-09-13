@@ -1,7 +1,25 @@
 #!/usr/bin/python3
 """
-Defines a 'Student' class representing a student with attributes like first name, last name, and age.
-Includes a 'to_json' method to convert a Student object to a JSON-compatible dictionary.
+This script defines a 'Student' class for representing student information.
+
+Usage:
+    To use this script, create an instance of the 'Student' class and utilize
+    the 'to_json' method to convert student data to a JSON-compatible
+    dictionary
+
+Example:
+    from student_module import Student
+
+    # Create a Student instance
+    student = Student("John", "Doe", 20)
+
+    # Convert the Student instance to a JSON dictionary with all attributes
+    json_data = student.to_json()
+
+    # Convert the Student instance to a JSON dictionary with selected
+    attributes
+    selected_attrs = ["first_name", "age"]
+    json_data = student.to_json(selected_attrs)
 """
 
 
@@ -32,11 +50,13 @@ class Student:
         Convert the Student object to a JSON-compatible dictionary.
 
         Args:
-            attrs (list, optional): A list of attribute names to include in the JSON dictionary.
-                If None, include all attributes (first name, last name, and age).
+            attrs (list, optional): A list of attribute names to include in
+            the JSON dictionary.
+                If None, include all attributes (first name, last name, age)
 
         Returns:
-            dict: A dictionary containing the specified attributes of the Student object.
+            dict: A dictionary containing the specified attributes of the
+            Student object.
         """
         data = {}
 
@@ -52,6 +72,6 @@ class Student:
                     value = getattr(self, name)
                     data[name] = value
                 except AttributeError:
-                    pass  
+                    pass
 
         return data
