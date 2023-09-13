@@ -71,12 +71,5 @@ class Student:
         Returns:
             self: The updated Student object.
         """
-        for name in dir(self):
-            if not name.startswith("__"):
-                try:
-                    value = json.get(name)
-                    setattr(self, name, value)
-                except AttributeError:
-                    pass
-
-        return self
+        for key, value in json.items():
+            setattr(self, key, value)
