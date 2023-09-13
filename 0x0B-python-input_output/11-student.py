@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
 This module defines a 'Student' class for representing student information
-and includes methods to convert a 'Student' object to a JSON-compatible dictionary
-and to update a 'Student' object's attributes from a JSON dictionary.
+and includes methods to convert a 'Student' object to a JSON-compatible
+dictionary and to update a 'Student' object's attributes from a JSON
+dictionary.
 """
 
 
@@ -58,13 +59,14 @@ class Student:
                     pass
 
         return data
-    
+
     def reload_from_json(self, json):
         """
         Update a Student object's attributes from a JSON dictionary.
 
         Args:
-            json (dict): A JSON dictionary containing attribute names and values.
+            json (dict): A JSON dictionary containing attribute names and
+            values.
 
         Returns:
             self: The updated Student object.
