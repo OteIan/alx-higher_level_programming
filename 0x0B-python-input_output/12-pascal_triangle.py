@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """
-This script defines a function 'pascal_triangle' to generate Pascal's Triangle up to the nth row.
+This script defines a function 'pascal_triangle' to generate Pascal's Triangle
+up to the nth row.
 
 Usage:
-    To use this script, call the 'pascal_triangle' function with the desired number of rows (n).
+    To use this script, call the 'pascal_triangle' function with the desired
+    number of rows (n).
 
 Example:
-    pascal_triangle(5) returns a list containing Pascal's Triangle up to the 5th row.
+    pascal_triangle(5) returns a list containing Pascal's Triangle up to the
+    5th row.
 """
 
 
@@ -22,7 +25,7 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
-    
+
     matrix = []
     for i in range(n):
         temp_list = []
@@ -35,5 +38,5 @@ def pascal_triangle(n):
                 temp_list.append(num)
 
         matrix.append(temp_list)
-    
+
     return matrix
