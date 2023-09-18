@@ -118,7 +118,6 @@ class TestRectangleClass(unittest.TestCase):
 
         self.assertEqual(actual_output, expected_output)
 
-
     def test_return(self):
         """ Tests the return value held when Rectangle() is called"""
         r = Rectangle(12, 3, 4, 2, 908)
@@ -127,14 +126,14 @@ class TestRectangleClass(unittest.TestCase):
             print(r)
             actual_output = mock_output.getvalue()
 
-        self.assertEqual(actual_output, "[Rectangle] (908) 4/2 - 12/3\n") 
+        self.assertEqual(actual_output, "[Rectangle] (908) 4/2 - 12/3\n")
 
     def test_update_function(self):
         """ This tests whether the rectangle updates when updated """
         r = Rectangle(10, 10, 10, 10, 10)
         r.update(908, 12, 3, 4, 2)
 
-        with patch("sys.stdout", new_callable=StringIO) as mock_output:    
+        with patch("sys.stdout", new_callable=StringIO) as mock_output:
             print(r)
             actual_output = mock_output.getvalue()
 
@@ -146,7 +145,7 @@ class TestRectangleClass(unittest.TestCase):
         r = Rectangle(10, 10, 10, 10, 10)
         r.update(height=3, width=12, x=4, y=2, id=908)
 
-        with patch("sys.stdout", new_callable=StringIO) as mock_output:    
+        with patch("sys.stdout", new_callable=StringIO) as mock_output:
             print(r)
             actual_output = mock_output.getvalue()
 
@@ -185,8 +184,6 @@ class TestRectangleClass(unittest.TestCase):
 
         self.assertEqual(file_content, expected_output)
 
-        
-
     def test_save_to_file_with_None(self):
         """ Test saving an empty list when list_obj is None """
         Rectangle.save_to_file(None)
@@ -195,7 +192,6 @@ class TestRectangleClass(unittest.TestCase):
             file_content = json.load(file)
 
         self.assertEqual(file_content, [])
-
 
 
 if __name__ == "__main__":
