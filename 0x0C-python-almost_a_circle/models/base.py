@@ -95,7 +95,8 @@ class Base:
             list: A list of dictionaries representing the JSON data.
 
         Note:
-            If the input JSON string is empty or "{}", an empty list is returned.
+            If the input JSON string is empty or "{}", an empty list is
+            returned.
         """
         if json_string is None or json_string == "{}":
             return []
