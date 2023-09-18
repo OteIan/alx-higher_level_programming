@@ -53,7 +53,7 @@ class Base:
             str: A JSON-formatted string representing the input list of
             dictionaries.
         """
-        if list_dictionaries is None:
+        if list_dictionaries is None or list_dictionaries == []:
             return []
         return json.dumps(list_dictionaries)
 
