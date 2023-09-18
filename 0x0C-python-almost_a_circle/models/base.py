@@ -81,4 +81,4 @@ class Base:
                 file.write("[]")
             else:
                 jstr = [obj.to_dictionary() for obj in list_objs]
-                file.write(Base.to_json_string(jstr))
+                file.write(cls.to_json_string(jstr))
