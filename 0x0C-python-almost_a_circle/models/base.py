@@ -66,7 +66,7 @@ class Base:
     #         cls: The class calling the method (can be used to determine the
     #         filename).
     #         list_objs (list): A list of objects to be saved to a JSON file.
-        
+
     #     Example:
     #         objects_list = [base_instance1, base_instance2]
     #         json_data = Base.to_json_string(objects_list)
