@@ -114,7 +114,7 @@ class Base:
 
             new.update(**dictionary)
             return new
-        
+
     @classmethod
     def load_from_file(cls):
         """  """
