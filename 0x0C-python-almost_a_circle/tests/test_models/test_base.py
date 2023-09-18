@@ -5,7 +5,6 @@ import models.base as one
 from models.base import Base
 
 
-
 class TestBaseClass(unittest.TestCase):
     """ Unittest class for base """
     @classmethod
@@ -25,8 +24,7 @@ class TestBaseClass(unittest.TestCase):
         """ Tests for class docstring """
         c_doc = Base.__doc__
         self.assertIsNotNone(c_doc)
-    
-    
+
     def test_function_docstring(self):
         """ Tests for function docstring """
         f_doc = Base.__init__.__doc__

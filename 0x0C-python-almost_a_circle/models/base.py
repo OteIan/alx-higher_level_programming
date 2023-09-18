@@ -3,8 +3,8 @@
 This module defines a 'Base' class for managing unique IDs for instances.
 
 Usage:
-    To use this module, create instances of the 'Base' class. Each instance will
-    be assigned a unique ID.
+    To use this module, create instances of the 'Base' class. Each instance
+    will be assigned a unique ID.
 
 Example:
     base_instance1 = Base()
@@ -47,13 +47,13 @@ class Base:
         if list_dictionaries is None:
             return []
         return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """  """
         if list_objs is None:
             list_objs = []
-            
+
         # Define the file name based on the class name
         filename = cls.__name__ + ".json"
 
