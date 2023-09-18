@@ -81,8 +81,8 @@ class Base:
         filename = cls.__name__ + ".json"
 
         # Convert list_objs to a JSON string
-        json_str = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+        jstr = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
 
         # Write JSON string to file, overwrite if it exists
         with open(filename, "w") as file:
-            file.write(json_str)
+            file.write(jstr)
