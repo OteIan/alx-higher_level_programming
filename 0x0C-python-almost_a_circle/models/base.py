@@ -85,8 +85,19 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """  """
+        """
+        Convert a JSON string representation into a list of dictionaries.
+
+        Args:
+            json_string (str): A JSON-formatted string.
+
+        Returns:
+            list: A list of dictionaries representing the JSON data.
+
+        Note:
+            If the input JSON string is empty or "{}", an empty list is returned.
+        """
         if json_string is None or json_string == "{}":
             return []
-        
+
         return json.loads(json_string)
