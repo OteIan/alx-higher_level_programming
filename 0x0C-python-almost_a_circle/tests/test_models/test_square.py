@@ -109,7 +109,6 @@ class TestSquareCLass(unittest.TestCase):
 
         self.assertEqual(actual_output, expected_output)
 
-
     def test_return(self):
         """ Tests the return value held when Square() is called"""
         s = Square(12, 4, 2, 908)
@@ -118,14 +117,14 @@ class TestSquareCLass(unittest.TestCase):
             print(s)
             actual_output = mock_output.getvalue()
 
-        self.assertEqual(actual_output, "[Square] (908) 4/2 - 12\n") 
+        self.assertEqual(actual_output, "[Square] (908) 4/2 - 12\n")
 
     def test_update_function(self):
         """ This tests whether the Square updates when updated """
         s = Square(10, 10, 10, 10)
         s.update(908, 12, 4, 2)
 
-        with patch("sys.stdout", new_callable=StringIO) as mock_output:    
+        with patch("sys.stdout", new_callable=StringIO) as mock_output:
             print(s)
             actual_output = mock_output.getvalue()
 
@@ -137,7 +136,7 @@ class TestSquareCLass(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         s.update(size=12, x=4, y=2, id=908)
 
-        with patch("sys.stdout", new_callable=StringIO) as mock_output:    
+        with patch("sys.stdout", new_callable=StringIO) as mock_output:
             print(s)
             actual_output = mock_output.getvalue()
 
@@ -156,7 +155,6 @@ class TestSquareCLass(unittest.TestCase):
         }
 
         self.assertDictEqual(s_dict, expected_output)
-
 
 
 if __name__ == "__main__":
