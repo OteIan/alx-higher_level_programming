@@ -74,15 +74,11 @@ class Base:
             Base.save_to_file(objects_list)  # Saves objects_list to a JSON
             file.
         """
-        if list_objs is None:
-            list_objs = "[]"
-
         # Define the file name based on the class name
         filename = cls.__name__ + ".json"
-
-        # Convert list_objs to a JSON string
-        jstr = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
-
-        # Write JSON string to file, overwrite if it exists
         with open(filename, "w") as file:
-            file.write(jstr)
+            if list_objs is None:
+                file.write("[]")
+            else:
+                jstr = [obj.to_dictionary() for obj in list_objs]
+                file.write(Base.to_json_string(jstr))
