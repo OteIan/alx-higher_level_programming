@@ -16,14 +16,13 @@ class Rectangle(Base):
 
         # inheriting properties of the parent class
         super().__init__(id)
-    
 
     # Validate Width
     @property
     def width(self):
         """  """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """  """
@@ -38,7 +37,7 @@ class Rectangle(Base):
     def height(self):
         """  """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """  """
@@ -53,7 +52,7 @@ class Rectangle(Base):
     def x(self):
         """  """
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """  """
@@ -68,7 +67,7 @@ class Rectangle(Base):
     def y(self):
         """  """
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """  """
@@ -81,7 +80,7 @@ class Rectangle(Base):
     def area(self):
         """  """
         return self.__height * self.__width
-    
+
     def display(self):
         """  """
         for _ in range(self.__y):
@@ -96,7 +95,8 @@ class Rectangle(Base):
     def __str__(self):
         """  """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
-                                                       self.__y, self.__width, self.__height)
+                                                       self.__y, self.__width,
+                                                       self.__height)
 
     def update(self, *args, **kwargs):
         """  """
@@ -112,7 +112,7 @@ class Rectangle(Base):
                     self.__y = value
                 if key == "id":
                     self.id = value
-     
+
         argc = len(args)
         if argc >= 1:
             self.id = args[0]
