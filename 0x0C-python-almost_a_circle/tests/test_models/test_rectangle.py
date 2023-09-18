@@ -170,7 +170,7 @@ class TestRectangleClass(unittest.TestCase):
 
         self.assertDictEqual(r_dict, expected_output)
 
-    def test_sace_to_file_with_objects(self):
+    def test_save_to_file_with_objects(self):
         """ Test saving objects to a JSON file """
         r1 = Rectangle(11, 5, 2, 3, 3)
         r2 = Rectangle(1, 3, id=7)
@@ -197,6 +197,34 @@ class TestRectangleClass(unittest.TestCase):
 
         self.assertEqual(file_content, [])
 
+    def test_load_from_json_string(self):
+        """ Tests loading a list from a json string """
+        input = [
+            {'id': 4, 'width': 2, 'height': 7},
+            {'id': 8, 'width': 5, 'height': 6}
+        ]
+
+        json_input = Rectangle.to_json_string(input)
+        output = Rectangle.from_json_string(json_input)
+
+        self.assertEqual(input, output)
+
+    def test_create_rectangle(self):
+        r1 = Rectangle(3, 5, 1, 2, 7)
+        r1_dict = r1.to_dictionary()
+
+        r2 = Rectangle.create(**r1_dict)
+        self.assertEqual("[Rectangle] (7) 1/2 - 3/5", str(r2))
+
+    def test_load_from_file(self):
+        """ Tests loading from a file """
+        r1 = Rectangle(10, 7, 2, 8, 1)
+        r2 = Rectangle(2, 4, 5, 6, 2)
+
+        Rectangle.save_to_file([r1, r2])
+        list_rect_output = Rectangle.load_from_file()
+        self.assertEqual(str(r1), str(list_rect_output[0]))
+        self.assertEqual(str(r2), str(list_rect_output[1]))
 
 if __name__ == "__main__":
     unittest.main()
