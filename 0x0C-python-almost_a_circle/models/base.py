@@ -43,23 +43,46 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """  """
+        """
+        Serialize a list of dictionaries to a JSON-formatted string.
+
+        Args:
+            list_dictionaries (list): A list of dictionaries to be serialized.
+
+        Returns:
+            str: A JSON-formatted string representing the input list of
+            dictionaries.
+        """
         if list_dictionaries is None:
             return []
         return json.dumps(list_dictionaries)
 
-    @classmethod
-    def save_to_file(cls, list_objs):
-        """  """
-        if list_objs is None:
-            list_objs = []
+    # @classmethod
+    # def save_to_file(cls, list_objs):
+    #     """
+    #     Save a list of objects to a JSON file.
 
-        # Define the file name based on the class name
-        filename = cls.__name__ + ".json"
+    #     Args:
+    #         cls: The class calling the method (can be used to determine the
+    #         filename).
+    #         list_objs (list): A list of objects to be saved to a JSON file.
+        
+    #     Example:
+    #         objects_list = [base_instance1, base_instance2]
+    #         json_data = Base.to_json_string(objects_list)
 
-        # Convert list_objs to a JSON string
-        json_str = cls.to_json_string(list_objs)
+    #         Base.save_to_file(objects_list)  # Saves objects_list to a JSON
+    #         file.
+    #     """
+    #     if list_objs is None:
+    #         list_objs = []
 
-        # Write JSON string to file, overwrite if it exists
-        with open(filename, "w") as file:
-            file.write(json_str)
+    #     # Define the file name based on the class name
+    #     filename = cls.__name__ + ".json"
+
+    #     # Convert list_objs to a JSON string
+    #     json_str = cls.to_json_string(list_objs)
+
+    #     # Write JSON string to file, overwrite if it exists
+    #     with open(filename, "w") as file:
+    #         file.write(json_str)
