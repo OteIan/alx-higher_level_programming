@@ -2,7 +2,7 @@
 
 const list = process.argv.slice(2).map(Number);
 
-if (list.length === 1) {
+if (list.length <= 1) {
   console.log(0);
 } else {
   const maxNum = Math.max(...list);
