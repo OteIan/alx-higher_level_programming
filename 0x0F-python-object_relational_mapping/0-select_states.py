@@ -12,7 +12,7 @@ def list_states(username, password, database):
     """
     # Connection details
     host = 'localhost'
-    port = '3306'
+    port = 3306
 
     # Connection establishment
     connection = MySQLdb.connect(
@@ -34,7 +34,7 @@ def list_states(username, password, database):
 
     rows = cursor.fetchall()
     for row in rows:
-        print(rows)
+        print(row)
 
     cursor.close()
     connection.close()
