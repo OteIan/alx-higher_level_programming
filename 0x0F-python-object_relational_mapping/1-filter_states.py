@@ -23,7 +23,7 @@ def list_states(username, password, database):
 
     cursor = connect.cursor()
 
-    query = "SELECT * FROM states WHERE name LIKE 'N%';"
+    query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC"
 
     cursor.execute(query)
 
