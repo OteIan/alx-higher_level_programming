@@ -24,7 +24,11 @@ def list_specific_state(username, password, database, name_searched):
 
     cursor = connect.cursor()
 
-    query = "SELECT * FROM states WHERE name LIKE '{}%' ORDER BY id ASC".format(name_searched)
+    query1 = "SELECT * FROM states WHERE name "
+
+    query2 = "LIKE BINARY '{}' ORDER BY id ASC".format(name_searched)
+
+    query = query1 + query2
 
     cursor.execute(query)
 
