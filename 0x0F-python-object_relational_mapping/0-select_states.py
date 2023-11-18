@@ -6,30 +6,41 @@ Script that lists all states from the database hbtn_0e_0_usa
 """
 
 
-if __name__ == "__main__":
-    # Retrieve MySQL credentials from command line arguments
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
+def list_states(username, password, database):
+    """
+    This function lists the states from a database
+    """
+    # Connection details
+    host = 'localhost'
+    port = '3306'
 
-    # Connect to MySQL server
-    db = MySQLdb.connect(
-            host="localhost",
-            port=3306,
-            user=mysql_username,
-            passwd=mysql_password,
-            db=database_name
+    # Connection establishment
+    connection = MySQLdb.connect(
+            host=host,
+            port=port,
+            user=username,
+            passwd=password,
+            db=database
             )
-    cursor = db.cursor()
 
-    # Execute the SQL query
-    query = "SELECT * FROM states ORDER BY id ASC"
+    # Create a cursor object
+    cursor = connection.cursor()
+
+    # Query
+    query = "SELECT * FROM states ORDER BY id"
+
+    # Execute the query
     cursor.execute(query)
 
-    # Fetch all the rows
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        print(rows)
 
     cursor.close()
-    db.close()
+    connection.close()
+
+
+if __name__ == "__main__":
+    username, password, database = sys.argv[1:4]
+
+    list_states(username, password, database)
