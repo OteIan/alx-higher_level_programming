@@ -2,8 +2,9 @@
 """
 model_state module definition
 """
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 
 Base = declarative_base()
@@ -18,5 +19,5 @@ class State(Base):
     - name(str): The name of the state
     """
     __tablename__ = "states"
-    id = Column(Integer, primary_key=True, nullable=True, unique=True)
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
