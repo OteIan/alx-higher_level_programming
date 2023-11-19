@@ -28,7 +28,7 @@ def list_state_object(user, password, database):
 
     state = session.query(State).first()
     if state:
-        print(state.id, state.name, sep=":")
+        print(state.id, state.name, sep=": ")
     else:
         print("Nothing")
 
