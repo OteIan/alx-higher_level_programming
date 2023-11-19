@@ -30,12 +30,7 @@ def add_state_object(user, password, database):
     session.add(new_state)
     session.commit()
 
-    filtered_states = session.query(State).filter(
-            State.name.like('Louisiana')).all()
-
-    if filtered_states:
-        for state in filtered_states:
-            print(state.id)
+    state = session.query(State).order_by(State.id.desc()).first()
 
     print(state.id)
 
