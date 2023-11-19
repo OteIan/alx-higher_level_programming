@@ -18,5 +18,5 @@ class State(Base):
     - name(str): The name of the state
     """
     __tablename__ = "states"
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, nullable=True, unique=True)
     name = Column(String(128), nullable=False)
