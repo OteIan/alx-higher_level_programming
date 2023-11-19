@@ -20,7 +20,7 @@ def list_state_objects(user, password, db):
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id)
-    
+
     for state in states:
         print(state.id, state.name, sep=": ")
 
