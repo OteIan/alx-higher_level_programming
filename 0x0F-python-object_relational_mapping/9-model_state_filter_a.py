@@ -29,7 +29,7 @@ def list_a_state_objects(user, password, database):
     states = session.query(State).filter(State.name.like("%a%"))
 
     for state in states.order_by(State.id):
-        print(state.id, state.name, sep=":")
+        print(state.id, state.name, sep=": ")
 
 
 if __name__ == "__main__":
