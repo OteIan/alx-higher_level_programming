@@ -20,7 +20,6 @@ def search_api(url, letter):
         print('Not a valid JSON')
 
 
-
 if __name__ == "__main__":
     letter = "" if len(sys.argv) == 1 else sys.argv[1]
     url = 'http://0.0.0.0:5000/search_user'
