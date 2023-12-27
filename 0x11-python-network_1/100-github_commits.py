@@ -7,8 +7,8 @@ import requests
 
 
 if __name__ == "__main__":
-    name, owner = sys.argv[1:]
-    url = f"https://api.github.com/repos/{name}/{owner}/commits"
+    repo, owner = sys.argv[1:]
+    url = f"https://api.github.com/repos/{owner}/{repo}/commits"
 
     commits = requests.get(url).json()
 
