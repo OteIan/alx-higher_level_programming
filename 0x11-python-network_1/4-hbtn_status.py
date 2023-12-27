@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 """Fetches the status of a given url"""
-from urllib import request
+import requests
 
 
 if __name__ == "__main__":
-    url = "https://alx-intranet.hbtn.io/status"
-
-    with request.urlopen(url) as response:
-        content = response.read().decode('utf-8')
+    content = requests.get("https://alx-intranet.hbtn.io/status").text
 
     print("Body response:")
     print(f"\t- type: {type(content)}")
