@@ -6,7 +6,7 @@ request(process.argv[2], function (error, response, body) {
   else {
     const work = JSON.parse(body);
     const result = {};
-    
+
     work.forEach((task) => {
       if (task.result && result[task.userId] === undefined) {
         result[task.userId] = 1;
