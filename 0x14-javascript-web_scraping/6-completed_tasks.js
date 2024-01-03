@@ -8,10 +8,10 @@ request(process.argv[2], function (error, response, body) {
     const result = {};
 
     work.forEach((task) => {
-      if (task.result && result[task.userId] === undefined) {
-        result[task.userId] = 1;
-      } else if (task.result) {
-        result[task.userId]++;
+      if (!(task.userId in result)) {
+        if (task.completed) result[task.userId] = 1;
+      } else if (task.completed) {
+        result[task.userId] += 1;
       }
     });
     console.log(result);
